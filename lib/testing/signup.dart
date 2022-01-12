@@ -47,6 +47,16 @@ class _SignupState extends State<Signup> {
         ),
       );
     } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("${resBody['error']}"),
+          backgroundColor: Colors.blue,
+          elevation: 10,
+          behavior: SnackBarBehavior.floating,
+          margin: const EdgeInsets.all(10),
+        ),
+      );
+
       print(resBody['error'] ?? "An error occurred");
     }
   }
