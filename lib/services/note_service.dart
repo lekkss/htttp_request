@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http_practice/model/post_model.dart';
 import 'package:http_practice/services/local_storage_service.dart';
@@ -64,7 +65,7 @@ class HttpService {
     );
 
     if (res.statusCode == 200) {
-      print("DELETED");
+      debugPrint("DELETED");
     } else {
       throw "Unable to delete post.";
     }
